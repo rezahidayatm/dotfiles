@@ -61,16 +61,16 @@ default_floating_border pixel 1
 # Set default border style for new floating windows. This only applies to windows that are spawned in floating mode, not windows that become floating afterwards.
 
 # Bind for application
-bindsym $mod+Shift+return     exec imv -s crop -t 120 -w "Hello\, World!" -r /usr/share/backgrounds/
-bindsym $mod+slash            exec $browser
-# bindsym $mod+backslash        exec $file_manager_cli
-bindsym $mod+backslash        exec $file_manager_gui
-bindsym $mod+p                exec killall -SIGUSR1 waybar
-bindsym $mod+q                kill
-bindsym $mod+apostrophe       exec swaymsg input "type:keyboard" xkb_options "none"; \
-                              exec notify-send -u low "Keyboard status: Normal"
-bindsym $mod+shift+apostrophe exec swaymsg input "type:keyboard" xkb_options "caps:swapescape"; \
-                              exec notify-send -u low "keyboard status: VIM Mode"
+bindsym $mod+Shift+return exec imv -s crop -t 120 -w "Hello\, World!" -r /usr/share/backgrounds/
+bindsym $mod+slash        exec $browser
+# bindsym $mod+backslash    exec $file_manager_cli
+bindsym $mod+backslash    exec $file_manager_gui
+bindsym $mod+p            exec killall -SIGUSR1 waybar
+bindsym $mod+q            kill
+bindsym $mod+escape       exec swaymsg input "type:keyboard" xkb_options "none"; \
+                          exec notify-send -u low "Keyboard status: Normal"
+bindsym $mod+caps_lock    exec swaymsg input "type:keyboard" xkb_options "caps:swapescape"; \
+                          exec notify-send -u low "keyboard status: VIM Mode"
 
 
 # Bind for output
