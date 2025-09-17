@@ -29,22 +29,49 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
 # Set application
 set $browser firefox
-set $file_manager_cli '$term -e yazi ~'
+# set $file_manager_cli $term -e vim ~
 set $file_manager_gui thunar
 set $bar_waybar_refresh ~/.config/sway/scripts/restart_waybar.sh
 
 # Theme
-font pango:Monaspace Xenon Var 8
-seat seat0 xcursor_theme Bibata-Modern-Classic 24
+font pango:Iosevka Slab 8
+seat seat0 xcursor_theme macOS 24
 output eDP-1 scale 0.71
 
+# This should work for all QT/KDE apps
+# if you have the Breeze Dark theme installed.
+# exec lookandfeeltool -platform offscreen \
+    # --apply "org.kde.breezedark.desktop"
+
+# You can set the theme for GTK apps here as well
+# if you run into problems.
+# exec dbus-send --session --dest=org.kde.GtkConfig \
+    # --type=method_call /GtkConfig org.kde.GtkConfig.setGtkTheme \
+    # "string:Breeze-dark-gtk"
+
+# Float app by default
+for_window [app_id="thunar"] floating enable
+
+# default_border normal|none|pixel [<n>]
+default_border normal
+# Set default border style for new tiled windows.
+
+# default_floating_border normal|none|pixel [<n>]
+default_floating_border pixel 1
+# Set default border style for new floating windows. This only applies to windows that are spawned in floating mode, not windows that become floating afterwards.
+
 # Bind for application
-bindsym $mod+Shift+return    exec imv -s crop -t 120 -w "Hello\, World!" -r /usr/share/backgrounds/
-bindsym $mod+slash           exec $browser
-bindsym $mod+backslash       exec $file_manager_cli
-bindsym $mod+Shift+backslash exec $file_manager_gui
-bindsym $mod+p               exec killall -SIGUSR1 waybar
-bindsym $mod+q               kill
+bindsym $mod+Shift+return     exec imv -s crop -t 120 -w "Hello\, World!" -r /usr/share/backgrounds/
+bindsym $mod+slash            exec $browser
+# bindsym $mod+backslash        exec $file_manager_cli
+bindsym $mod+backslash        exec $file_manager_gui
+bindsym $mod+p                exec killall -SIGUSR1 waybar
+bindsym $mod+q                kill
+bindsym $mod+apostrophe       exec swaymsg input "type:keyboard" xkb_options "none"; \
+                              exec notify-send -u low "Keyboard status: Normal"
+bindsym $mod+shift+apostrophe exec swaymsg input "type:keyboard" xkb_options "caps:swapescape"; \
+                              exec notify-send -u low "keyboard status: VIM Mode"
+
 
 # Bind for output
 bindsym $mod+8 output eDP-1 scale 0.53; exec $bar_waybar_refresh ~/.config/waybar/config8.jsonc
@@ -217,15 +244,15 @@ mode "resize" {
     bindsym $right resize grow width 10px
 
     # Ditto, with arrow keys
-    bindsym Left resize shrink width 1px
-    bindsym Down resize grow height 1px
-    bindsym Up resize shrink height 1px
-    bindsym Right resize grow width 1px
+    bindsym Left resize shrink width 100px
+    bindsym Down resize grow height 100px
+    bindsym Up resize shrink height 100px
+    bindsym Right resize grow width 100px
     
-    bindsym Shift+Left resize shrink width 100px
-    bindsym Shift+Down resize grow height 100px
-    bindsym Shift+Up resize shrink height 100px
-    bindsym Shift+Right resize grow width 100px
+    bindsym Shift+Left resize shrink width 1px
+    bindsym Shift+Down resize grow height 1px
+    bindsym Shift+Up resize shrink height 1px
+    bindsym Shift+Right resize grow width 1px
 
     # Return to default mode
     bindsym Return mode "default"
