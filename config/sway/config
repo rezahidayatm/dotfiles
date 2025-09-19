@@ -29,7 +29,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
 # Set application
 set $browser firefox
-# set $file_manager_cli $term -e vim ~
+# set $file_manager_cli $term yazi ~
 set $file_manager_gui thunar
 set $bar_waybar_refresh ~/.config/sway/scripts/restart_waybar.sh
 
@@ -51,32 +51,37 @@ output eDP-1 scale 0.71
 
 # Float app by default
 for_window [app_id="thunar"] floating enable
+# for_window [instance="steamwebhelper"] floating enable
 
 # default_border normal|none|pixel [<n>]
 default_border normal
 # Set default border style for new tiled windows.
 
 # default_floating_border normal|none|pixel [<n>]
-default_floating_border pixel 1
+default_floating_border none
 # Set default border style for new floating windows. This only applies to windows that are spawned in floating mode, not windows that become floating afterwards.
 
 # Bind for application
-bindsym $mod+Shift+return exec imv -s crop -t 120 -w "Hello\, World!" -r /usr/share/backgrounds/
+bindsym $mod+shift+return exec imv -s crop -t 120 -w "Hello\, World!" -r /usr/share/backgrounds/
 bindsym $mod+slash        exec $browser
 # bindsym $mod+backslash    exec $file_manager_cli
 bindsym $mod+backslash    exec $file_manager_gui
 bindsym $mod+p            exec killall -SIGUSR1 waybar
 bindsym $mod+q            kill
-bindsym $mod+escape       exec swaymsg input "type:keyboard" xkb_options "none"; \
-                          exec notify-send -u low "Keyboard status: Normal"
-bindsym $mod+caps_lock    exec swaymsg input "type:keyboard" xkb_options "caps:swapescape"; \
-                          exec notify-send -u low "keyboard status: VIM Mode"
+bindsym $mod+escape       exec swaymsg input "type:keyboard" xkb_options "caps:escape"; \
+                          exec notify-send -u low "Keyboard status: VIM"
+bindsym $mod+shift+escape exec swaymsg input "type:keyboard" xkb_options "none"; \
+                          exec notify-send -u low "keyboard status: Normal"
 
 
 # Bind for output
 bindsym $mod+8 output eDP-1 scale 0.53; exec $bar_waybar_refresh ~/.config/waybar/config8.jsonc
 bindsym $mod+9 output eDP-1 scale 0.71; exec $bar_waybar_refresh ~/.config/waybar/config9.jsonc
 bindsym $mod+0 output eDP-1 scale 1.00; exec $bar_waybar_refresh ~/.config/waybar/config0.jsonc
+
+# input "1133:49309:Logitech_G203_LIGHTSYNC_Gaming_Mouse" {
+#       left_handed enabled
+# }
 
 ### Output configuration
 #
@@ -155,6 +160,11 @@ output * bg /usr/share/backgrounds/default.jxl fill
     bindsym $mod+Down focus down
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
+
+    bindsym $mod+shift+tab focus left
+    # bindsym $mod+Down focus down
+    # bindsym $mod+Up focus up
+    bindsym $mod+tab focus right
 
     # Move the focused window with the same, but add Shift
     bindsym $mod+Shift+$left move left

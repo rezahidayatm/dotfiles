@@ -12,13 +12,16 @@
 
     "modules-left": [
         "clock",
+        "tray",
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad"
     ],
+
     "modules-center": [
         "sway/window"
     ],
+
     "modules-right": [
         "idle_inhibitor",
         "pulseaudio",
@@ -33,6 +36,7 @@
         // "clock",
         // "tray"
     ],
+
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,

@@ -8,21 +8,24 @@
     // Choose the order of the modules
     
     "fixed-center": false,
-    "margin-right": 455, // scale 0.71
+    "margin-right": 454, // scale 0.71
 
     "modules-left": [
         "clock",
+        "tray",
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad"
     ],
+
     "modules-center": [
         "sway/window"
     ],
+
     "modules-right": [
         "idle_inhibitor",
         "pulseaudio",
-        "network",
+        // "network",
         // "power-profiles-daemon",
         "cpu",
         "memory",
@@ -33,6 +36,7 @@
         // "clock",
         // "tray"
     ],
+
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,

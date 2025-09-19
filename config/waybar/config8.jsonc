@@ -6,19 +6,22 @@
     // "width": 1280, // Waybar width
     // "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    
+   
     "fixed-center": false,
-    "margin-right": 851, // scale 0.71
+    "margin-right": 851, // scale 0.53
 
     "modules-left": [
         "clock",
+        "tray",
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad"
     ],
+
     "modules-center": [
         "sway/window"
     ],
+
     "modules-right": [
         "idle_inhibitor",
         "pulseaudio",
@@ -33,6 +36,7 @@
         // "clock",
         // "tray"
     ],
+
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
