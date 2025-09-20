@@ -8,7 +8,7 @@
     // Choose the order of the modules
     
     "fixed-center": false,
-    "margin-right": 641, // scale 0.71
+    "margin-right": 454, // scale 0.71
 
     "modules-left": [
         "clock",
@@ -25,7 +25,7 @@
     "modules-right": [
         "idle_inhibitor",
         "pulseaudio",
-        "network",
+        // "network",
         // "power-profiles-daemon",
         "cpu",
         "memory",
