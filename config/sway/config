@@ -29,13 +29,14 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
 # Set application
 set $browser chromium-browser
+set $browser2 firefox
 # set $file_manager_cli $term yazi ~
 set $file_manager_gui thunar
 set $bar_waybar_refresh ~/.config/sway/scripts/restart_waybar.sh
 
 # Theme
 font pango:Iosevka Slab 6
-seat seat0 xcursor_theme macOS 24
+seat seat0 xcursor_theme macOS 16
 # output eDP-1 scale 0.71
 
 # This should work for all QT/KDE apps
@@ -66,6 +67,7 @@ default_floating_border none
 # Bind for application
 bindsym $mod+shift+return exec imv -s crop -t 120 -w "Hello\, World!" -r /usr/share/backgrounds/
 bindsym $mod+slash        exec $browser
+bindsym $mod+shift+slash  exec $browser2
 # bindsym $mod+backslash    exec $file_manager_cli
 bindsym $mod+backslash    exec $file_manager_gui
 bindsym $mod+p            exec killall -SIGUSR1 waybar
@@ -79,7 +81,7 @@ bindsym $mod+shift+escape exec swaymsg input "type:keyboard" xkb_options "none";
 # Bind for output
 bindsym $mod+8 output eDP-1 scale 0.53; exec $bar_waybar_refresh ~/.config/waybar/config8.jsonc
 bindsym $mod+9 output eDP-1 scale 0.71; exec $bar_waybar_refresh ~/.config/waybar/config9.jsonc
-bindsym $mod+0 output eDP-1 scale 1.00; exec $bar_waybar_refresh ~/.config/waybar/config0.jsonc
+bindsym $mod+0 output eDP-1 scale    1; exec $bar_waybar_refresh ~/.config/waybar/config0.jsonc
 
 # input "1133:49309:Logitech_G203_LIGHTSYNC_Gaming_Mouse" {
 #       left_handed enabled

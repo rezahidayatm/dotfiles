@@ -8,7 +8,7 @@
     // Choose the order of the modules
     
     "fixed-center": false,
-    "margin-right": 454, // scale 0.71
+    "margin-right": 454, // scale 1
 
     "modules-left": [
         "clock",
