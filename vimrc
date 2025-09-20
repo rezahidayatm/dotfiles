@@ -38,7 +38,7 @@ set mouse=a      " Mengaktifkan mouse di semua mode (normal, visual, insert, com
 set laststatus=2 " Selalu tampilkan status bar
 
 " set wrap       " Mengaktifkan word wrap 
-set nowrap     " Mengaktifkan word wrap
+set nowrap       " Mengaktifkan word wrap
 
 " Buat direktori ini terlebih dahulu! mkdir -p ~/.vim/backup
 " Buat direktori ini terlebih dahulu! mkdir -p ~/.vim/undodir
