@@ -34,7 +34,7 @@ set $file_manager_gui thunar
 set $bar_waybar_refresh ~/.config/sway/scripts/restart_waybar.sh
 
 # Theme
-font pango:Iosevka Slab 8
+font pango:Iosevka Slab 6
 seat seat0 xcursor_theme macOS 24
 # output eDP-1 scale 0.71
 
@@ -51,6 +51,8 @@ seat seat0 xcursor_theme macOS 24
 
 # Float app by default
 for_window [app_id="Thunar"] floating enable
+for_window [app_id="thunar"] floating enable
+for_window [app_id="xarchiver"] floating enable
 # for_window [instance="steamwebhelper"] floating enable
 
 # default_border normal|none|pixel [<n>]
@@ -268,7 +270,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "resize"; exec notify-send -u low "Resize mode active"
 
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
