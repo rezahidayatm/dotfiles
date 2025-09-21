@@ -6,8 +6,9 @@
     "editor.mouseWheelZoom": true,
     "terminal.integrated.mouseWheelZoom": true,
     "editor.fontFamily": "'Monaspace Neon Var', Consolas, 'Courier New', monospace",
-    "editor.fontLigatures": "'calt', 'liga', 'ss04', 'ss06', 'ss07', 'ss08', 'ss10'",
+    "editor.fontLigatures": "'calt', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'liga'",
     "editor.cursorStyle": "block",
     "terminal.integrated.cursorBlinking": true,
-    "editor.cursorSmoothCaretAnimation": "explicit"
+    "editor.cursorSmoothCaretAnimation": "explicit",
+    "git.autofetch": true
 }
