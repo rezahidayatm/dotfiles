@@ -11,7 +11,6 @@ RemoveToolTip() {
 {
     global keysSwapped
     keysSwapped := true
-
     ToolTip("CapsLock: VIM")
     SetTimer(RemoveToolTip, -2000)
 }
@@ -20,7 +19,6 @@ RemoveToolTip() {
 {
     global keysSwapped
     keysSwapped := false
-
     ToolTip("CapsLock: Normal")
     SetTimer(RemoveToolTip, -2000)
 }
