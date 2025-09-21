@@ -1,0 +1,13 @@
+{
+    "chat.disableAIFeatures": true,
+    "git.defaultCloneDirectory": "D:/Repos/",
+    "git.path": "D:/_tools/Git/PortableGit-2.51.0-64-bit/bin/git.exe",
+    "git.confirmSync": false,
+    "editor.mouseWheelZoom": true,
+    "terminal.integrated.mouseWheelZoom": true,
+    "editor.fontFamily": "'Monaspace Neon Var', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": "'calt', 'liga', 'ss04', 'ss06', 'ss07', 'ss08', 'ss10'",
+    "editor.cursorStyle": "block",
+    "terminal.integrated.cursorBlinking": true,
+    "editor.cursorSmoothCaretAnimation": "explicit"
+}

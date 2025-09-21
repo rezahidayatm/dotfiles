@@ -1,0 +1,92 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "keybindings": 
+    [
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+shift+d"
+        }
+    ],
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "colorScheme": "Dark+",
+            "cursorShape": "filledBox",
+            "font": 
+            {
+                "axes": 
+                {
+                    "ital": 1,
+                    "slnt": 0,
+                    "wdth": 100,
+                    "wght": 400
+                },
+                "face": "Monaspace Neon Var",
+                "features": 
+                {
+                    "calt": 1,
+                    "liga": 1,
+                    "ss01": 1,
+                    "ss03": 1,
+                    "ss04": 1,
+                    "ss05": 1,
+                    "ss06": 1,
+                    "ss07": 1,
+                    "ss08": 1,
+                    "ss09": 1,
+                    "ss10": 1
+                }
+            }
+        },
+        "list": 
+        [
+            {
+                "guid": "{1d448d33-aeae-57eb-80d1-b7a6a9f2202b}",
+                "hidden": false,
+                "name": "Fedora WSL",
+                "source": "Microsoft.WSL"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": true,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            }
+        ]
+    },
+    "schemes": [],
+    "themes": [],
+    "useAcrylicInTabRow": true
+}
